@@ -6,6 +6,7 @@
 body {
     margin: 0 auto;
     line-height: 1.7em;
+
 }
 .l-box {
     padding: 1em;
@@ -72,4 +73,19 @@ body .primary-button {
     text-align: center;
     padding: 1em;
     font-size: 80%;
+}
+
+#div_esquerda {
+
+min-height: 200px;
+width: 100%;
+float: left;
+
+}
+#div_direita {
+
+min-height: 200px;
+width: 50%;
+float: right;
+
 }
