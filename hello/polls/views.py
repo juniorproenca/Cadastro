@@ -2,16 +2,24 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import datetime 
 from .forms import *
+from django.urls import path
+
+from django.views.generic import TemplateView
 # Create your views here.
 
-def home (request):	
-	return render(request,'polls/home.html')
-
+class homeTemplateView(TemplateView):	
+	template_name= "polls/home.html"
+	
 def inscrição(request):	
-	form = UsuarioForm()
-	return render(request,"polls/inscrição.html", {'form':form})
+ 	form = UsuarioForm()
+
+ 	if form.is_valid():
+ 		form.save()
+ 		return listagem(request)
+ 	return render(request,"polls/inscrição.html", {'form':form})
 
 
-def cadastrar_usuario(request):
-    form = UsuarioForm()
-    return render(request, 'form.html', {'form':form})
+def listagem(request):
+ 	lista={}
+ 	lista ['listas'] = Usuario.objects.all()
+ 	return render(request, 'polls/listagem.html',lista)

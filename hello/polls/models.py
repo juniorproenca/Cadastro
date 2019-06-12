@@ -24,9 +24,9 @@ class Usuario(models.Model):
 
     nome = models.CharField(max_length=20, null=False)
     email = models.EmailField(null=False)
-    sexo = models.CharField(max_length=1, choices=SEXO_CHOICES)
-    grau = models.CharField(max_length=1, choices=grau_de_instrucao)
-    naturalidade = models.CharField(max_length=1, choices=naturalidade2)
+    sexo = models.CharField(max_length=15, choices=SEXO_CHOICES)
+    grau = models.CharField(max_length=15, choices=grau_de_instrucao)
+    naturalidade = models.CharField(max_length=15, choices=naturalidade2)
 
 
 

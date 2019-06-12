@@ -1,12 +1,16 @@
 from django.urls import path 
-from polls.views import home,inscrição 
+from polls.views import homeTemplateView,inscrição,listagem
+from django.views.generic import TemplateView
 
 app_name= 'polls'
 
 urlpatterns = [
 
- path('home/',home),
- path('inscrição/',inscrição)
+ path('home/',homeTemplateView.as_view()),
+ path('inscrição/',inscrição),
+ path('listagem/',listagem)
+
+
  
 
 ]
