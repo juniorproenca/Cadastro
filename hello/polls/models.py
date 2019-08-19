@@ -27,7 +27,7 @@ class Usuario(models.Model):
     sexo = models.CharField(max_length=15, choices=SEXO_CHOICES)
     grau = models.CharField(max_length=15, choices=grau_de_instrucao)
     naturalidade = models.CharField(max_length=15, choices=naturalidade2)
-
+   
 
 
  

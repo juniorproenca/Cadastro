@@ -13,9 +13,11 @@
 
 
   <h3>Lista de Matriculas</h3>
-  {% for Usuario in listas %}
-   {{Usuario.nome}}- {{Usuario.email}}-{{Usuario.grau}}
+
+ <h3> {% for Usuario in listas %}
+   {{Usuario.nome}}-{{Usuario.email}}-{{Usuario.grau}}-{{Usuario.naturalidade}}
   {% endfor %}
+  </h3>
   <footer></footer>
 </body>
 </html>

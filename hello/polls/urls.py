@@ -7,7 +7,7 @@ app_name= 'polls'
 urlpatterns = [
 
  path('home/',homeTemplateView.as_view()),
- path('inscrição/',inscrição),
+ path('inscricao/',inscrição,name='inscricao'),
  path('listagem/',listagem)
 
 
